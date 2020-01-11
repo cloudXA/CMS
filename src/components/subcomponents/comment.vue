@@ -7,11 +7,13 @@
     <mt-button type="primary" size="large">发表评论</mt-button>
 
     <div class="cmt-list">
+      <!-- 根据响应获取的数据，设计template样式 -->
       <div class="cmt-item" v-for="(item, i) in comments" :key="item.add_time">
         <div class="cmt-title">
           第{{ i+1 }}楼&nbsp;&nbsp;用户：{{ item.user_name }}&nbsp;&nbsp;发表时间：{{ item.add_time | dateFormat }}
         </div>
         <div class="cmt-body">
+          <!-- 模板中的判断语句 -->
           {{ item.content === 'undefined' ? '此用户很懒，嘛都没说': item.content }}
         </div>
       </div>
@@ -25,6 +27,7 @@
 <script>
 import { Toast } from "mint-ui";
 export default {
+  // data 中的数据是一个函数包裹，变动后的data函数，如何重复样template继续渲染？
   data() {
     return {
       pageIndex: 1, // 默认展示第一页数据
@@ -38,8 +41,10 @@ export default {
     getComments() {
       // 获取评论
       this.$http
+        // 获取默认第一页的数据
         .get("api/getcomments/" + this.id + "?pageindex=" + this.pageIndex)
         .then(result => {
+          console.log(result, 'result-comment','page',this.pageIndex);
           if (result.body.status === 0) {
             // this.comments = result.body.message;
             // 每当获取新评论数据的时候，不要把老数据清空覆盖，而是应该以老数据，拼接上新数据
@@ -52,6 +57,7 @@ export default {
     getMore() {
       // 加载更多
       this.pageIndex++;
+      // 再次调用getComments(),实现comments数据的拼接
       this.getComments();
     }
   },
