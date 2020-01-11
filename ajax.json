@@ -1,0 +1,21 @@
+// HomeContainer.vue中 this.$http.get("api/getlunbo").then(result => {})获取的result.body数据
+// 发现result.body和Network-> Preview中的数据相同
+{
+    "status":0,
+    "message":[
+            {   "id":1,
+                "url":"http://www.itcast.cn/subject/phoneweb/index.html",
+                "img":"http://www.itcast.cn/subject/webzly/images/1.jpg"
+            },
+            {
+                "id":2,
+                "url":"http://www.itcast.cn/subject/phoneweb/index.html",
+                "img":"http://www.itcast.cn/subject/webzly/images/1.2.jpg"
+            },
+            {
+                "id":3,
+                "url":"http://www.itcast.cn/subject/phoneweb/index.html",
+                "img":"http://www.itcast.cn/images/newslide/homepageandphone/20185609105606277.jpg"
+            }
+        ]
+}
