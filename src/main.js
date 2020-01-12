@@ -26,19 +26,33 @@ Vue.use(VueResource)
 
 Vue.http.options.root = 'http://www.liulongbin.top:3005';
 
+// 全局设置post时候表单数据格式组织形式 application/x-www-form-urlencoded,
+// 数据被编码成以 '&' 分隔的键-值对, 同时以 '=' 分隔键和值. 
+// 非字母或数字的字符会被 percent-encoding: 
+// 这也就是为什么这种类型不支持二进制数据(应使用 multipart/form-data 代替).
+Vue.http.options.emulateJSON = true;
 
 // 导入 MUI 的样式
 import './lib/mui/css/mui.min.css'
 // 导入扩展图标样式
 import './lib/mui/css/icons-extra.css'
 
+// 安装图片预览插件
+import VuePreview from 'vue-preview'
+Vue.use(VuePreview)
+
 
 // 按需导入 Mint-UI 中的组件   (vue中自定义导入mint-ui部分组件的方式TODO:)
-import { Header, Swipe, SwipeItem, Button } from 'mint-ui'
+/** import { Header, Swipe, SwipeItem, Button } from 'mint-ui'
 Vue.component(Header.name, Header)
 Vue.component(Swipe.name, Swipe)
 Vue.component(SwipeItem.name, SwipeItem)
 Vue.component(Button.name, Button)
+**/
+import MintUI from 'mint-ui'
+Vue.use(MintUI)
+// 引用node_modules中的库，省略node_modules
+import 'mint-ui/lib/style.css'
 
 
 // 1.3 导入自己的 router.js 路由模块
