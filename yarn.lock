@@ -852,6 +852,11 @@ babel-plugin-transform-regenerator@^6.22.0:
   dependencies:
     regenerator-transform "^0.10.0"
 
+babel-plugin-transform-remove-strict-mode@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/babel-plugin-transform-remove-strict-mode/-/babel-plugin-transform-remove-strict-mode-0.0.2.tgz#913685aab95439f3a0ed88e588fbd5e997890579"
+  integrity sha1-kTaFqrlUOfOg7YjliPvV6ZeJBXk=
+
 babel-plugin-transform-runtime@^6.23.0:
   version "6.23.0"
   resolved "https://registry.npm.taobao.org/babel-plugin-transform-runtime/download/babel-plugin-transform-runtime-6.23.0.tgz#88490d446502ea9b8e7efb0fe09ec4d99479b1ee"
@@ -3768,9 +3773,9 @@ lodash.uniq@^4.5.0:
   integrity sha1-0CJTc662Uq3BvILklFM5qEJ1R3M=
 
 lodash@^4.0.0, lodash@^4.17.11, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.3, lodash@^4.17.4, lodash@~4.17.10:
-  version "4.17.15"
-  resolved "https://registry.npm.taobao.org/lodash/download/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
-  integrity sha1-tEf2ZwoEVbv+7dETku/zMOoJdUg=
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
+  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
 loglevel@^1.4.1:
   version "1.6.6"
@@ -4566,6 +4571,11 @@ performance-now@^2.1.0:
   version "2.1.0"
   resolved "https://registry.npm.taobao.org/performance-now/download/performance-now-2.1.0.tgz#6309f4e0e5fa913ec1c69307ae364b4b377c9e7b"
   integrity sha1-Ywn04OX6kT7BxpMHrjZLSzd8nns=
+
+photoswipe@^4.1.1:
+  version "4.1.3"
+  resolved "https://registry.yarnpkg.com/photoswipe/-/photoswipe-4.1.3.tgz#59f49494eeb9ddab5888d03392926a19bc197550"
+  integrity sha512-89Z43IRUyw7ycTolo+AaiDn3W1EEIfox54hERmm9bI12IB9cvRfHSHez3XhAyU8XW2EAFrC+2sKMhh7SJwn0bA==
 
 pify@^2.0.0:
   version "2.3.0"
@@ -6369,6 +6379,13 @@ vue-loader@^13.3.0:
     vue-hot-reload-api "^2.2.0"
     vue-style-loader "^3.0.0"
     vue-template-es2015-compiler "^1.6.0"
+
+vue-preview@1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/vue-preview/-/vue-preview-1.0.5.tgz#d503d0b5a0b1f4dc31c0ab996a10d3c3e2b20d44"
+  integrity sha1-1QPQtaCx9NwxwKuZahDTw+KyDUQ=
+  dependencies:
+    photoswipe "^4.1.1"
 
 vue-resource@^1.3.4:
   version "1.5.1"
